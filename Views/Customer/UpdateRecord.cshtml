@@ -1,0 +1,42 @@
+﻿@model CommonLayer.Models.Customer
+
+<div class="row">
+    <div class="col-6 offset-3">
+        <form asp-action="UpdateRecord" asp-controller="Customer" method="post">
+
+            <div class="form-group">
+                <input type="hidden" asp-for="@Model.Id" />
+                <label asp-for="FirstName"></label>
+                <input asp-for="FirstName" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LastName"></label>
+                <input asp-for="LastName" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Mobile"></label>
+                <input asp-for="Mobile" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Address"></label>
+                <input asp-for="Address" class="form-control" />
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Update"
+                       class="btn btn-primary" onclick="return confirm('Are you sure to update this record')" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+
